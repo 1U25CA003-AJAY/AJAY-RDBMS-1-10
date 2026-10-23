@@ -1,19 +1,14 @@
-DROP DATABASE IF EXISTS CollegeDB;
-CREATE DATABASE CollegeDB;
+
 USE CollegeDB;
-
-CREATE TABLE Student(
-    StudentID INT(5) PRIMARY KEY,
-    StudentName VARCHAR(20) NOT NULL,
-    DOB DATE,
-    Gender VARCHAR(10),
-    DepartmentID INT(5)
+CREATE TABLE Course (
+CourseID INT(10) PRIMARY KEY,
+CourseName VARCHAR(20),
+Credits INT(10),
+DepartmentID INT(5)
 );
-
--- Alter Student table
-
--- Add Email
-
--- Add PhoneNumber
-
--- Display structure
+INSERT INTO Course VALUES
+(101, 'BCA', 4, 201),
+(102, 'BSC IT', 5, 204),
+(103, 'BBA', 4, 210);
+DESC Course;
+SELECT * FROM Course;
